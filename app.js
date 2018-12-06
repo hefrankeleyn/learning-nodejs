@@ -1,6 +1,7 @@
 'use strict';
 // koa2中，导入的是一个class，所以用大写表示
 const Koa = require('koa');
+
 // 创建一个koa对象表示web app本身
 const app = new Koa();
 
