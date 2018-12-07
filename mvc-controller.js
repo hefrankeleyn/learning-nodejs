@@ -10,7 +10,6 @@ function executeMapping(router,mapping){
         console.log(url);
         if(url.startsWith("GET")){
             var path = url.substring(4);
-            console.log('path: '+path+'mapping[url]: '+mapping[url]);
             router.get(path,mapping[url]);
             console.log(`Register url mapping:GET ${path}`);
         } else if (url.startsWith("POST")){
@@ -29,7 +28,10 @@ function addController(router,dir){
     var files = fs.readdirSync(__dirname+"/"+dir);
     // 过滤出fs文件
     var js_files = files.filter((f)=>{
-        return f.endsWith('.js');
+        console.log('f is :'+f);
+        if(f ==='mvc-index.js'){
+            return f;
+        }
     });
 
     // 处理每一个js文件
