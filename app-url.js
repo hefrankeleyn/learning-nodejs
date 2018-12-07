@@ -8,8 +8,6 @@ const router = require('koa-router')();
 // 用于解析body
 const bodyParser = require('koa-bodyparser');
 
-
-
 // 创建一个koa对象表示web app本身
 const app = new Koa();
 //在合适的位置添加上下面的一句话
